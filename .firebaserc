@@ -1,9 +1,5 @@
 {
   "projects": {
-<<<<<<< HEAD
     "default": "netflix-gpt-deepa"
-=======
-    "default": "netflixgpt-35f55"
->>>>>>> origin/main
   }
 }
