@@ -9,7 +9,6 @@ const Profile = ({ user }) => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
-        navigate("/");
       })
       .catch((error) => {
         navigate("/error");
