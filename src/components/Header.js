@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
+import { logo } from "../utils/constants";
 const Header = () => {
   const user = useSelector((store) => store.user);
   const [isHovered, setIsHovered] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe =   onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
         dispatch(
@@ -33,6 +34,10 @@ const Header = () => {
       
       }
     });
+    
+    //unsubscribes when component unmounts
+    return() => unsubscribe();
+    
   }, []);
 
   return (
@@ -40,11 +45,11 @@ const Header = () => {
       <img
         className="w-32 md:w-40"
         alt="logo"
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+        src={logo}
       />
       {user && (
         <div
-          className="relative flex items-center"
+          className="relative flex items-center cursor-pointer"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
