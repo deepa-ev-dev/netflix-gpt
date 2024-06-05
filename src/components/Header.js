@@ -32,10 +32,11 @@ const Header = () => {
         navigate("/");
       }
     });
-
+  
     //unsubscribes when component unmounts
     return () => unsubscribe();
-  }, []);
+  }, [dispatch, navigate]);
+  
 
   return (
     <div className="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-8 py-4 bg-gradient-to-b from-black to-transparent z-10">
