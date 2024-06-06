@@ -39,7 +39,7 @@ const Header = () => {
   
 
   return (
-    <div className="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-8 py-4 bg-gradient-to-b from-black to-transparent z-10">
+    <div className="absolute top-0 left-0 w-full md:w-screen flex justify-between items-center px-4 md:px-8 py-4 bg-gradient-to-b from-black to-transparent z-10">
       <img className="w-32 md:w-40" alt="logo" src={logo} />
       {user && (
         <div
