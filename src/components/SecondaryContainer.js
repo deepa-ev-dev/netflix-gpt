@@ -9,7 +9,7 @@
       <div className="w-full md:w-screen bg-black">
         <div className="md:-mt-52 relative z-20 px-6 md:px-8">
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies}/>
-        <MovieList title={"PopularMovies"} movies={movies?.popularMovies}/>
+        <MovieList title={"Popular Movies"} movies={movies?.popularMovies}/>
         <MovieList title={"Horror Movies"} movies={movies?.nowPlayingMovies}/>
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies}/>
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies}/>
