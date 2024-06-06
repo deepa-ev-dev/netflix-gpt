@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
+import { BG_URL } from "../utils/constants";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -96,7 +97,7 @@ const Login = () => {
       <div className="relative flex-1 flex items-center justify-center">
         <img
           alt="netflix"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dd4dfce3-1a39-4b1a-8e19-b7242da17e68/86742114-c001-4800-a127-c9c89ca7bbe4/IN-en-20240527-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BG_URL}
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         <form
