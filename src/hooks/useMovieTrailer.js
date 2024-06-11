@@ -35,6 +35,7 @@ const useMovieTrailer = (movieId) => {
       // Cleanup function to cancel any pending requests or unsubscribe
       // Not needed in this case because there's no cleanup required
     };
+    // eslint-disable-next-line
   }, [dispatch, movieId]);
 };
 
